@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Medical Input - Medinova.ai</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="voice-input.css" />
+    <script src="language.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <span>💙</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-label">Medinova.ai</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">Home</a></li>
+          <li><a href="specialist.html" class="nav-link" data-i18n="navSpecialist">Specialist</a></li>
+          <li><a href="questions.html" class="nav-link" data-i18n="navQuestions">Questions</a></li>
+          <li><a href="voice-input.html" class="nav-link active" data-i18n="navVoiceInput">Voice Input</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="navAbout">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="language-selector">
+            <button class="lang-btn" data-lang="en" id="lang-en">EN</button>
+            <button class="lang-btn" data-lang="hi" id="lang-hi">हिं</button>
+          </div>
+          <a href="login.html" class="nav-login" data-i18n="navLogin">Log in</a>
+          <a href="signup.html" class="btn btn-outline nav-signup" data-i18n="navSignup">Sign Up</a>
+          <a href="appointment.html" class="btn btn-primary nav-cta" data-i18n="navBookAppointment">Book Appointment</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="voice-hero">
+        <div class="voice-hero-content">
+          <h1 data-i18n="voiceHeroTitle">Voice-Based Medical Input</h1>
+          <p data-i18n="voiceHeroDesc">
+            Speak in your regional language. Our AI will translate and convert your voice into medical records automatically.
+          </p>
+        </div>
+      </section>
+
+      <!-- Voice Input Section -->
+      <section class="voice-input-section">
+        <div class="voice-input-container">
+          <div class="voice-input-card">
+            <div class="voice-header">
+              <h2 data-i18n="voiceInputTitle">Speak Your Medical Information</h2>
+              <p data-i18n="voiceInputDesc">Select your language and start speaking. Your voice will be translated to English automatically.</p>
+            </div>
+
+            <!-- Language Selection -->
+            <div class="language-selection">
+              <label for="inputLanguage" data-i18n="selectInputLanguage">Select Your Language:</label>
+              <select id="inputLanguage" class="language-select">
+                <option value="hi-IN" data-i18n="langHindi">Hindi (हिंदी)</option>
+                <option value="en-IN" data-i18n="langEnglish">English</option>
+                <option value="bn-IN" data-i18n="langBengali">Bengali (বাংলা)</option>
+                <option value="te-IN" data-i18n="langTelugu">Telugu (తెలుగు)</option>
+                <option value="ta-IN" data-i18n="langTamil">Tamil (தமிழ்)</option>
+                <option value="mr-IN" data-i18n="langMarathi">Marathi (मराठी)</option>
+                <option value="gu-IN" data-i18n="langGujarati">Gujarati (ગુજરાતી)</option>
+                <option value="kn-IN" data-i18n="langKannada">Kannada (ಕನ್ನಡ)</option>
+                <option value="pa-IN" data-i18n="langPunjabi">Punjabi (ਪੰਜਾਬੀ)</option>
+              </select>
+            </div>
+
+            <!-- Voice Recording -->
+            <div class="voice-recording-area">
+              <div class="recording-status" id="recordingStatus">
+                <div class="status-icon">🎤</div>
+                <p data-i18n="readyToRecord">Ready to record</p>
+              </div>
+              
+              <div class="recording-controls">
+                <button id="startRecording" class="btn btn-primary record-btn" data-i18n="startRecording">
+                  <span class="btn-icon">🎤</span>
+                  Start Recording
+                </button>
+                <button id="stopRecording" class="btn btn-outline stop-btn" data-i18n="stopRecording" disabled>
+                  <span class="btn-icon">⏹</span>
+                  Stop Recording
+                </button>
+                <button id="clearText" class="btn btn-outline clear-btn" data-i18n="clearText">
+                  <span class="btn-icon">🗑</span>
+                  Clear
+                </button>
+              </div>
+
+              <div class="recording-timer" id="recordingTimer" style="display: none;">
+                <span data-i18n="recordingTime">Recording: </span>
+                <span id="timerDisplay">00:00</span>
+              </div>
+            </div>
+
+            <!-- Transcribed Text Display -->
+            <div class="transcription-area">
+              <label data-i18n="transcribedText">Transcribed Text (Original Language):</label>
+              <div class="transcription-box" id="transcriptionBox">
+                <p class="placeholder-text" data-i18n="transcriptionPlaceholder">Your transcribed text will appear here...</p>
+              </div>
+            </div>
+
+            <!-- Translated Text Display -->
+            <div class="translation-area">
+              <label data-i18n="translatedText">Translated Text (English):</label>
+              <div class="translation-box" id="translationBox">
+                <p class="placeholder-text" data-i18n="translationPlaceholder">Translated text will appear here...</p>
+              </div>
+            </div>
+
+            <!-- Medical Form Fields -->
+            <div class="medical-form-section">
+              <h3 data-i18n="medicalFormTitle">Medical Information Form</h3>
+              <form id="medicalForm" class="medical-form">
+                <div class="form-row">
+                  <label for="symptoms" data-i18n="symptomsLabel">Symptoms:</label>
+                  <textarea id="symptoms" name="symptoms" rows="3" placeholder="Describe your symptoms..." data-i18n-placeholder="symptomsPlaceholder"></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="medications" data-i18n="medicationsLabel">Current Medications:</label>
+                  <textarea id="medications" name="medications" rows="2" placeholder="List your current medications..." data-i18n-placeholder="medicationsPlaceholder"></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="allergies" data-i18n="allergiesLabel">Allergies:</label>
+                  <textarea id="allergies" name="allergies" rows="2" placeholder="List any allergies..." data-i18n-placeholder="allergiesPlaceholder"></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="medicalHistory" data-i18n="medicalHistoryLabel">Medical History:</label>
+                  <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Describe your medical history..." data-i18n-placeholder="medicalHistoryPlaceholder"></textarea>
+                </div>
+                <div class="form-actions">
+                  <button type="button" id="fillFromVoice" class="btn btn-outline" data-i18n="fillFromVoice">
+                    Fill from Voice Input
+                  </button>
+                  <button type="submit" class="btn btn-primary" data-i18n="submitForm">
+                    Submit Medical Information
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Instructions Card -->
+          <div class="instructions-card">
+            <h3 data-i18n="instructionsTitle">How to Use</h3>
+            <ul class="instructions-list">
+              <li data-i18n="instruction1">Select your preferred regional language</li>
+              <li data-i18n="instruction2">Click 'Start Recording' and speak clearly</li>
+              <li data-i18n="instruction3">Your speech will be transcribed automatically</li>
+              <li data-i18n="instruction4">Text will be translated to English</li>
+              <li data-i18n="instruction5">Use 'Fill from Voice Input' to populate the form</li>
+              <li data-i18n="instruction6">Review and submit your medical information</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <div class="brand-icon">
+              <span>💙</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-label">Medinova.ai</span>
+            </div>
+          </div>
+          <p data-i18n="footerDescription">
+            Your trusted healthcare companion providing smart medical support,
+            online consultations, and emergency services for better health
+            management.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="navHome">Home</a></li>
+            <li><a href="specialist.html" data-i18n="navSpecialist">Specialist</a></li>
+            <li><a href="questions.html" data-i18n="navQuestions">Questions</a></li>
+            <li><a href="voice-input.html" data-i18n="navVoiceInput">Voice Input</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footerContact">Contact Info</h4>
+          <ul>
+            <li>📞 +91 987654321</li>
+            <li>✉ support@medinova.ai</li>
+            <li>📍 123 Healthcare Ave, Medical City</li>
+            <li>⏰ 24/7 Emergency Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Medinova.ai. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="voice-input.js"></script>
+  </body>
+</html>

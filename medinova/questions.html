@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Questions - Medinova.ai</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="questions.css" />
+    <script src="language.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <span>💙</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-label">Medinova.ai</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">Home</a></li>
+          <li><a href="specialist.html" class="nav-link" data-i18n="navSpecialist">Specialist</a></li>
+          <li><a href="subscription.html" class="nav-link" data-i18n="navSubscription">Subscription</a></li>
+          <li><a href="questions.html" class="nav-link active" data-i18n="navQuestions">Questions</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="navAbout">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="language-selector">
+            <button class="lang-btn" data-lang="en" id="lang-en">EN</button>
+            <button class="lang-btn" data-lang="hi" id="lang-hi">हिं</button>
+          </div>
+          <a href="login.html" class="nav-login" data-i18n="navLogin">Log in</a>
+          <a href="signup.html" class="btn btn-outline nav-signup" data-i18n="navSignup">Sign Up</a>
+          <a href="appointment.html" class="btn btn-primary nav-cta" data-i18n="navBookAppointment">Book Appointment</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="questions-hero">
+        <div class="questions-hero-content">
+          <h1 data-i18n="questionsHeroTitle">Ask Your Health Questions</h1>
+          <p data-i18n="questionsHeroDesc">
+            Get answers from verified doctors. Ask questions, vote for important ones, and get expert medical advice.
+          </p>
+        </div>
+      </section>
+
+      <!-- Question Submission Form -->
+      <section class="question-form-section">
+        <div class="question-form-container">
+          <h2 data-i18n="askQuestionTitle">Ask a Question</h2>
+          <form id="questionForm" class="question-form">
+            <div class="form-group">
+              <label for="questionText" data-i18n="questionLabel">Your Question</label>
+              <textarea
+                id="questionText"
+                name="questionText"
+                rows="4"
+                placeholder="Type your health-related question here..."
+                required
+                data-i18n-placeholder="questionPlaceholder"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="questionCategory" data-i18n="categoryLabel">Category</label>
+              <select id="questionCategory" name="category" required>
+                <option value="" data-i18n="selectCategory">Select Category</option>
+                <option value="general" data-i18n="categoryGeneral">General Health</option>
+                <option value="cardiology" data-i18n="categoryCardiology">Cardiology</option>
+                <option value="dermatology" data-i18n="categoryDermatology">Dermatology</option>
+                <option value="neurology" data-i18n="categoryNeurology">Neurology</option>
+                <option value="pediatrics" data-i18n="categoryPediatrics">Pediatrics</option>
+                <option value="orthopedics" data-i18n="categoryOrthopedics">Orthopedics</option>
+                <option value="other" data-i18n="categoryOther">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="submitQuestion">Submit Question</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Top Questions Section -->
+      <section class="top-questions-section">
+        <div class="top-questions-container">
+          <div class="section-header">
+            <h2 data-i18n="topQuestionsTitle">Top Questions</h2>
+            <div class="sort-options">
+              <button class="sort-btn active" data-sort="votes" data-i18n="sortByVotes">Most Voted</button>
+              <button class="sort-btn" data-sort="recent" data-i18n="sortByRecent">Most Recent</button>
+              <button class="sort-btn" data-sort="answered" data-i18n="sortByAnswered">Answered</button>
+            </div>
+          </div>
+          <div id="questionsList" class="questions-list">
+            <!-- Questions will be dynamically added here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Answered Questions Section -->
+      <section class="answered-questions-section">
+        <div class="answered-questions-container">
+          <h2 data-i18n="answeredQuestionsTitle">Answered by Verified Doctors</h2>
+          <div id="answeredQuestionsList" class="answered-questions-list">
+            <!-- Answered questions will be dynamically added here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <div class="brand-icon">
+              <span>💙</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-label">Medinova.ai</span>
+            </div>
+          </div>
+          <p data-i18n="footerDescription">
+            Your trusted healthcare companion providing smart medical support,
+            online consultations, and emergency services for better health
+            management.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="navHome">Home</a></li>
+            <li><a href="specialist.html" data-i18n="navSpecialist">Specialist</a></li>
+            <li><a href="questions.html" data-i18n="navQuestions">Questions</a></li>
+            <li><a href="subscription.html" data-i18n="navSubscription">Subscription</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footerContact">Contact Info</h4>
+          <ul>
+            <li>📞 +91 987654321</li>
+            <li>✉ support@medinova.ai</li>
+            <li>📍 123 Healthcare Ave, Medical City</li>
+            <li>⏰ 24/7 Emergency Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Medinova.ai. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+  </body>
+</html>

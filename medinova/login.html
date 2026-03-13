@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Sync | Log In</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body class="login-page">
+    <!-- Header (same structure as index header) -->
+    <!-- <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <span>💙</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-label">Health Sync</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="specialist.html" class="nav-link">Specialist</a></li>
+           <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="subscription.html" class="nav-link">Subscription</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="login.html" class="nav-login">Log in</a>
+          <a href="signup.html" class="btn btn-outline nav-signup">Sign Up</a>
+          <a href="appointment.html" class="btn btn-primary nav-cta">Book Appointment</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header> -->
+
+    <main class="login-main" id="home">
+      <div class="login-container">
+        <!-- Left side: marketing copy -->
+        <section class="login-left">
+          <div class="login-kicker">
+            <span></span>
+            Seamless access to your Health Sync account
+          </div>
+          <h1 class="login-title">Welcome back to smarter healthcare</h1>
+          <p class="login-subtitle">
+            Log in to manage appointments, view health insights, and stay connected with your
+            care team — all in one secure place.
+          </p>
+
+          <div class="login-highlight">
+            <div class="login-highlight-item">
+              🔐 End‑to‑end encryption for your medical data
+            </div>
+            <div class="login-highlight-item">
+              ⚡ Instant access to 500+ verified specialists
+            </div>
+            <div class="login-highlight-item">
+              📊 Personalized health trends and reminders
+            </div>
+          </div>
+        </section>
+
+        <!-- Right side: login form -->
+        <section class="login-right">
+          <h2>Log in to Health Sync</h2>
+          <p>Enter your details to continue to your dashboard.</p>
+
+          <form class="login-form" id="loginForm">
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-row password-row">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button type="button" class="password-toggle" id="togglePassword">
+                Show
+              </button>
+            </div>
+
+            <div class="login-meta">
+              <label class="remember-me">
+                <input type="checkbox" name="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary login-button">
+              Log in
+            </button>
+
+            <div class="login-divider">
+              <span>or continue with</span>
+            </div>
+
+            <div class="login-oauth">
+              <button type="button" class="oauth-btn">
+                <span class="icon">🟦</span>
+                <span>Continue with Microsoft</span>
+              </button>
+              <button type="button" class="oauth-btn">
+                <span class="icon">G</span>
+                <span>Continue with Google</span>
+              </button>
+            </div>
+
+            <p class="login-footer-text">
+              New to Health Sync?
+              <a href="signup.html">Create an account</a>
+            </p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2024 Health Sync. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="subscription.html">Plans</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Support</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Simple password visibility toggle
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("togglePassword");
+
+      if (passwordInput && togglePassword) {
+        togglePassword.addEventListener("click", () => {
+          const isPassword = passwordInput.type === "password";
+          passwordInput.type = isPassword ? "text" : "password";
+          togglePassword.textContent = isPassword ? "Hide" : "Show";
+        });
+      }
+    </script>
+  </body>
+</html>
+
+

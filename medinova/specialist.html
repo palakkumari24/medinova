@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Sync - Find Specialists</title>
+    <link rel="stylesheet" href="specialist.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <span>💙</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-label">Health Sync</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li>
+            <a href="specialist.html" class="nav-link active">Specialist</a>
+          </li>
+          <!-- <li><a href="index.html#features" class="nav-link">Features</a></li> -->
+          <li><a href="subscription.html" class="nav-link">Subscription</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="login.html" class="nav-login">Log in</a>
+          <a href="signup.html" class="btn btn-outline nav-signup">Sign Up</a>
+          <a href="appointment.html" class="btn btn-primary nav-cta"
+            >Book Appointment</a
+          >
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="specialist-hero">
+        <div class="hero-content">
+          <h1>Find Your Perfect Specialist</h1>
+          <p>
+            Connect with board-certified doctors across all medical specialties
+          </p>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                placeholder="Search by name, specialty, or condition..."
+                id="searchInput"
+              />
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">
+                All Specialties
+              </button>
+              <button class="filter-btn" data-filter="cardiology">
+                Cardiology
+              </button>
+              <button class="filter-btn" data-filter="dermatology">
+                Dermatology
+              </button>
+              <button class="filter-btn" data-filter="neurology">
+                Neurology
+              </button>
+              <button class="filter-btn" data-filter="pediatrics">
+                Pediatrics
+              </button>
+              <button class="filter-btn" data-filter="orthopedics">
+                Orthopedics
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specialists Grid -->
+      <section class="specialists-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Expert Specialists</h2>
+            <p>500+ certified doctors ready to help you</p>
+          </div>
+
+          <div class="specialists-grid" id="specialistsGrid">
+            <!-- Specialist Card 1 -->
+            <article class="specialist-card" data-specialty="cardiology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Sarah Johnson"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Sarah Johnson</h3>
+                <p class="specialty">Cardiologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.9 (234 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 City General Hospital</p>
+                  <p>📅 15+ years experience</p>
+                  <p>💬 Speaks: English, Spanish</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 2 -->
+            <article class="specialist-card" data-specialty="dermatology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Michael Chen"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Michael Chen</h3>
+                <p class="specialty">Dermatologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.8 (189 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 Skin Care Clinic</p>
+                  <p>📅 12+ years experience</p>
+                  <p>💬 Speaks: English, Mandarin</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 3 -->
+            <article class="specialist-card" data-specialty="neurology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Emily Rodriguez"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Emily Rodriguez</h3>
+                <p class="specialty">Neurologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.9 (312 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 NeuroCare Center</p>
+                  <p>📅 18+ years experience</p>
+                  <p>💬 Speaks: English, Spanish</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 4 -->
+            <article class="specialist-card" data-specialty="pediatrics">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. James Wilson"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. James Wilson</h3>
+                <p class="specialty">Pediatrician</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.9 (267 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 Children's Medical Center</p>
+                  <p>📅 14+ years experience</p>
+                  <p>💬 Speaks: English</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 5 -->
+            <article class="specialist-card" data-specialty="orthopedics">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Lisa Anderson"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Lisa Anderson</h3>
+                <p class="specialty">Orthopedic Surgeon</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.8 (198 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 OrthoCare Hospital</p>
+                  <p>📅 16+ years experience</p>
+                  <p>💬 Speaks: English, French</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 6 -->
+            <article class="specialist-card" data-specialty="cardiology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Robert Martinez"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Robert Martinez</h3>
+                <p class="specialty">Cardiologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.9 (156 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 Heart Care Institute</p>
+                  <p>📅 20+ years experience</p>
+                  <p>💬 Speaks: English, Spanish</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 7 -->
+            <article class="specialist-card" data-specialty="dermatology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. Patricia Lee"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. Patricia Lee</h3>
+                <p class="specialty">Dermatologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.7 (143 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 Advanced Dermatology</p>
+                  <p>📅 10+ years experience</p>
+                  <p>💬 Speaks: English, Korean</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specialist Card 8 -->
+            <article class="specialist-card" data-specialty="neurology">
+              <div class="specialist-image">
+                <img
+                  src="photo-1487260211189-670c54da558d.jpeg"
+                  alt="Dr. David Thompson"
+                />
+                <span class="online-badge">Online</span>
+              </div>
+              <div class="specialist-info">
+                <h3>Dr. David Thompson</h3>
+                <p class="specialty">Neurologist</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">4.8 (221 reviews)</span>
+                </div>
+                <div class="specialist-details">
+                  <p>🏥 Brain Health Center</p>
+                  <p>📅 13+ years experience</p>
+                  <p>💬 Speaks: English</p>
+                </div>
+                <div class="specialist-actions">
+                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-outline">View Profile</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="load-more">
+            <button class="btn btn-outline">Load More Specialists</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Section -->
+      <section class="why-choose">
+        <div class="container">
+          <div class="section-header">
+            <h2>Why Choose Our Specialists?</h2>
+            <p>We ensure the highest quality of care for all our patients</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">✅</div>
+              <h3>Board Certified</h3>
+              <p>
+                All our specialists are board-certified and licensed
+                professionals
+              </p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⭐</div>
+              <h3>Top Rated</h3>
+              <p>Consistently high ratings and positive patient reviews</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🕐</div>
+              <h3>Available 24/7</h3>
+              <p>
+                Round-the-clock access to specialists for urgent consultations
+              </p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">💬</div>
+              <h3>Multilingual</h3>
+              <p>
+                Specialists fluent in multiple languages for better
+                communication
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <div class="brand-icon">
+              <span>💙</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-label">Health Sync</span>
+            </div>
+          </div>
+          <p>
+            Your trusted healthcare companion providing smart medical support,
+            online consultations, and emergency services for better health
+            management.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="specialist.html">Find Specialists</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📞 +91 987654321</li>
+            <li>✉ support@healthsync.com</li>
+            <li>📍 123 Healthcare Ave, Medical City</li>
+            <li>⏰ 24/7 Emergency Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Health Sync. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="specialist.js"></script>
+  </body>
+</html>

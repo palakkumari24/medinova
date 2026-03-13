@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Sync | Book an Appointment</title>
+    <link rel="stylesheet" href="appointment.css" />
+  </head>
+  <body class="appointment-page">
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <span>💙</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-label">Health Sync</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#doctors" class="nav-link">Specialist</a></li>
+          <!-- <li><a href="index.html#features" class="nav-link">Features</a></li> -->
+          <li><a href="subscription.html" class="nav-link">Subscription</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="login.html" class="nav-login">Log in</a>
+          <a href="signup.html" class="btn btn-outline nav-signup">Sign Up</a>
+          <a href="appointment.html" class="btn btn-primary nav-cta"
+            >Book Appointment</a
+          >
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="appointment-hero" id="top">
+        <div class="appointment-hero-content">
+          <p class="hero-kicker">
+            <span class="kicker-dot"></span>
+            Instant scheduling with verified clinicians
+          </p>
+          <h1>Plan Your Next Visit In Minutes</h1>
+          <p>
+            Tell us what you need, choose the best slot, and receive
+            confirmation from our care concierge. Emergency-ready, HIPAA
+            compliant, and available in over 120 cities.
+          </p>
+          <div class="appointment-hero-highlights">
+            <div>
+              <strong>⏱️ 24/7</strong>
+              Smart triage & instant confirmations
+            </div>
+            <div>
+              <strong>🩺 500+</strong>
+              Board-certified specialists
+            </div>
+            <div>
+              <strong>📱 Hybrid</strong>
+              In-person or virtual consultations
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="#book" class="btn btn-primary">Start Booking</a>
+            <a href="#availability" class="btn btn-outline">See Specialists</a>
+          </div>
+        </div>
+        <div class="appointment-hero-card">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            Concierge online
+          </div>
+          <h3>Today's Fastest Slots</h3>
+          <ul>
+            <li>
+              <span>Cardiology</span>
+              <strong>09:30 AM</strong>
+            </li>
+            <li>
+              <span>Dermatology</span>
+              <strong>01:15 PM</strong>
+            </li>
+            <li>
+              <span>Pediatrics</span>
+              <strong>04:00 PM</strong>
+            </li>
+          </ul>
+          <p>Average confirmation time: <strong>11 minutes</strong></p>
+        </div>
+      </section>
+
+      <section class="appointment-section" id="book">
+        <div class="appointment-grid">
+          <article class="appointment-card form-card">
+            <div class="card-header">
+              <div>
+                <p class="hero-kicker">
+                  <span class="kicker-dot"></span>
+                  Step 1
+                </p>
+                <h2>Tell us about the visit</h2>
+              </div>
+              <span class="badge">Secure • Encrypted</span>
+            </div>
+            <form id="appointmentForm" class="appointment-form">
+              <div class="form-row">
+                <label for="patientName">Patient name</label>
+                <input
+                  type="text"
+                  id="patientName"
+                  name="patientName"
+                  placeholder="e.g., Olivia Patel"
+                  required
+                />
+              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="contactEmail">Email</label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    placeholder="you@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="contactPhone">Phone</label>
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="contactPhone"
+                    placeholder="+1 (555) 000-0000"
+                  />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="specialization">Specialization</label>
+                  <select id="specialization" name="specialization" required>
+                    <option value="">Select specialty</option>
+                    <option>Cardiology</option>
+                    <option>Dermatology</option>
+                    <option>General Physician</option>
+                    <option>Pediatrics</option>
+                    <option>Neurology</option>
+                    <option>Orthopedics</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="doctor">Preferred doctor</label>
+                  <select id="doctor" name="doctor">
+                    <option value="">Match me automatically</option>
+                    <option>Dr. Maya Lin</option>
+                    <option>Dr. William Carter</option>
+                    <option>Dr. Priya Natarajan</option>
+                    <option>Dr. Leo Fernandez</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="date">Preferred date</label>
+                  <input type="date" id="date" name="date" required />
+                </div>
+                <div class="form-row">
+                  <label for="time">Preferred time</label>
+                  <input type="time" id="time" name="time" required />
+                </div>
+                <div class="form-row">
+                  <label for="mode">Mode</label>
+                  <select id="mode" name="mode">
+                    <option>In-person</option>
+                    <option>Virtual</option>
+                    <option>Home visit</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <label>Quick slot pick</label>
+                <div class="slot-grid">
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="08:30 AM"
+                  >
+                    08:30 AM
+                  </button>
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="09:15 AM"
+                  >
+                    09:15 AM
+                  </button>
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="10:45 AM"
+                  >
+                    10:45 AM
+                  </button>
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="01:00 PM"
+                  >
+                    01:00 PM
+                  </button>
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="03:30 PM"
+                  >
+                    03:30 PM
+                  </button>
+                  <button
+                    type="button"
+                    class="slot-button"
+                    data-slot="06:15 PM"
+                  >
+                    06:15 PM
+                  </button>
+                </div>
+                <p class="slot-hint">
+                  Select a slot to auto-fill your request.
+                </p>
+              </div>
+              <div class="form-row">
+                <label for="notes">Symptoms / context</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Share details so we can prep the care team..."
+                ></textarea>
+              </div>
+              <div class="form-actions">
+                <label class="toggle">
+                  <input type="checkbox" name="followup" value="yes" />
+                  <span>Need a follow-up reminder</span>
+                </label>
+                <label class="toggle">
+                  <input
+                    type="checkbox"
+                    name="shareRecords"
+                    value="yes"
+                    checked
+                  />
+                  <span>Share my health records with the doctor</span>
+                </label>
+              </div>
+              <input type="hidden" id="selectedSlot" name="selectedSlot" />
+              <button type="submit" class="btn btn-primary full-width">
+                Submit request
+              </button>
+            </form>
+          </article>
+          <article class="appointment-card summary-card">
+            <div class="card-header">
+              <div>
+                <p class="hero-kicker">
+                  <span class="kicker-dot"></span>
+                  Step 2
+                </p>
+                <h2>Preview confirmation</h2>
+              </div>
+              <span id="confirmationBadge" class="badge soft"
+                >Awaiting request</span
+              >
+            </div>
+            <div id="summaryDetails" class="summary-details">
+              Provide details to see a real-time summary of your visit here.
+            </div>
+            <div class="summary-meta">
+              <div>
+                <span>Average wait</span>
+                <strong>11 min</strong>
+              </div>
+              <div>
+                <span>Eligibility</span>
+                <strong>All plans</strong>
+              </div>
+              <div>
+                <span>Reminder</span>
+                <strong>SMS & Email</strong>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-step">
+                <span>1</span>
+                <div>
+                  <strong>Request received</strong>
+                  <p>Our AI triage validates symptoms in seconds.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <span>2</span>
+                <div>
+                  <strong>Doctor assigned</strong>
+                  <p>Concierge confirms specialist, clinic, and slot.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <span>3</span>
+                <div>
+                  <strong>Care reminders</strong>
+                  <p>Get prep steps, directions, and reimbursement info.</p>
+                </div>
+              </div>
+            </div>
+            <div class="support-card">
+              <div>
+                <strong>Need something sooner?</strong>
+                <p>Tap the chat bubble in the app for expedited care.</p>
+              </div>
+              <a href="tel:+15551234567" class="link">Call concierge →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="availability" id="availability">
+        <div class="section-header">
+          <div>
+            <p class="hero-kicker">
+              <span class="kicker-dot"></span>
+              Featured doctors online now
+            </p>
+            <h2>Pick a specialist with openings today</h2>
+            <p>
+              These physicians can confirm your appointment instantly or within
+              15 minutes. More experts are available inside the app.
+            </p>
+          </div>
+          <a href="#book" class="btn btn-outline">Match me automatically</a>
+        </div>
+        <div class="availability-grid">
+          <article class="doctor-card">
+            <div class="doctor-meta">
+              <div class="doctor-avatar">ML</div>
+              <div>
+                <h3>Dr. Maya Lin</h3>
+                <p>Cardiology • 12 yrs</p>
+              </div>
+            </div>
+            <ul>
+              <li>Next slot <strong>10:45 AM</strong></li>
+              <li>Hybrid consults available</li>
+              <li>Avg. rating 4.9</li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-primary hold-slot"
+              data-slot="10:45 AM"
+            >
+              Hold slot
+            </button>
+          </article>
+          <article class="doctor-card">
+            <div class="doctor-meta">
+              <div class="doctor-avatar">WC</div>
+              <div>
+                <h3>Dr. William Carter</h3>
+                <p>Dermatology • 8 yrs</p>
+              </div>
+            </div>
+            <ul>
+              <li>Next slot <strong>01:15 PM</strong></li>
+              <li>Virtual-first visits</li>
+              <li>Avg. rating 4.8</li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-outline hold-slot"
+              data-slot="01:15 PM"
+            >
+              Hold slot
+            </button>
+          </article>
+          <article class="doctor-card">
+            <div class="doctor-meta">
+              <div class="doctor-avatar">PN</div>
+              <div>
+                <h3>Dr. Priya Natarajan</h3>
+                <p>Pediatrics • 15 yrs</p>
+              </div>
+            </div>
+            <ul>
+              <li>Next slot <strong>04:00 PM</strong></li>
+              <li>Clinic & home visits</li>
+              <li>Avg. rating 5.0</li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-outline hold-slot"
+              data-slot="04:00 PM"
+            >
+              Hold slot
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="care-guidance">
+        <div class="section-header">
+          <div>
+            <p class="hero-kicker">
+              <span class="kicker-dot"></span>
+              What to expect
+            </p>
+            <h2>Your appointment concierge keeps everything aligned</h2>
+            <p>Every booking comes with the same premium support level.</p>
+          </div>
+        </div>
+        <div class="guidance-grid">
+          <article class="guidance-card">
+            <span>📄</span>
+            <h3>Smart intake</h3>
+            <p>
+              Upload labs, wearables, or prior notes so your doctor reviews them
+              before the visit.
+            </p>
+          </article>
+          <article class="guidance-card">
+            <span>🔔</span>
+            <h3>Automated reminders</h3>
+            <p>
+              SMS, email, and push notifications keep you on track with prep
+              steps and medications.
+            </p>
+          </article>
+          <article class="guidance-card">
+            <span>🧭</span>
+            <h3>Navigation & follow-up</h3>
+            <p>
+              Door-to-door guidance, reimbursement paperwork, and post-visit
+              care plans included.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <div class="brand-icon">
+              <span>💙</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-label">Health Sync</span>
+            </div>
+          </div>
+          <p>
+            Your trusted healthcare companion providing smart medical support,
+            online consultations, and emergency services for better health
+            management.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="specialist.html">Specialist</a></li>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="appointment.html">Appointments</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📞 +91 987654321</li>
+            <li>✉ support@healthsync.com</li>
+            <li>📍 123 Healthcare Ave, Medical City</li>
+            <li>⏰ 24/7 Emergency Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Health Sync. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
