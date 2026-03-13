@@ -44,36 +44,21 @@ python -m http.server 8000
 Visit http://localhost:8000
  to view the app.
 
-📁 Project Structure
-medinova/
+ 📁 Project Structure
+
+ medinova/
 ├── medinova/
 │   ├── index.html       # Main entry point
 │   ├── css/             # Stylesheets
 │   ├── js/              # JavaScript files
 │   └── assets/          # Images and other static assets
 └── README.md
+
 🛠️ Tech Stack
 Technology	Usage
 HTML5	Page structure and semantic markup
 CSS3	Styling, animations, responsive layout
 JavaScript	Interactivity and dynamic content
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repository
-
-Create a new branch: git checkout -b feature/your-feature-name
-
-Make your changes and commit: git commit -m "Add your feature"
-
-Push to your branch: git push origin feature/your-feature-name
-
-Open a Pull Request
-
-📄 License
-
-This project is open-source under the MIT License.
 
 👩‍💻 Author
 
